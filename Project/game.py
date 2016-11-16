@@ -26,3 +26,11 @@ class Player(object):
 	def unlock(self, place):
 		""" Unlocks player's current place, if place is locked and player has key.
 		"""
+
+class Mentor(object):
+    def __init__(self, name, message):
+        self.name = name
+        self.message = message
+
+    def talk(self):
+        return self.message
