@@ -23,8 +23,12 @@ class Player(object):
 		""" Take a thing if at player's current place.
 		"""
 
+    def pick_up(self, friend):
+        """ Pick up a friend at player's current place.
+        """
+
 	def unlock(self, place):
-		""" Unlocks player's current place, if place is locked and player has key.
+		""" Unlocks player's current place, if place is locked and player has ticket.
 		"""
 
 class Mentor(object):
@@ -43,6 +47,14 @@ class Thing(object):
     def use(self, place):
         print("You can't use a {0} here".format(self.name))
 
+class Friend(object):
+    def __init__(self, name, message):
+        self.name = name #We can make this an input
+        self.message = message
+
+    def talk(self):
+        return self.message
+
 class Key(Thing):
     def use(self, place):
         if place.locked:
@@ -52,13 +64,14 @@ class Key(Thing):
             print(place.name, 'is already unlocked!')
 
 class Place(object):
-    def __init__(self, name, description, characters, things):
+    def __init__(self, name, description, characters, things, friend):
         self.name = name
         self.description = description
         self.characters = {character.name: character for character in characters}
         self.things = {thing.name: thing for thing in things}
         self.locked = False
         self.exits = {}
+        self.friend = 
 
     def look(self):
         print('You are currently at ' + self.name + '. You take a look around and see:')
