@@ -4,21 +4,22 @@ from game import *
 # Mentors:
 #how to check whether or not they have the item
 #first is item not in backpack, second is item in backpack
-stanley = Mentor('Stanley', ["Here is your ticket.... Wait where is my money?", "Nice doing business with you!"])
-gary = Mentor('Gary', ['Want this used jersey?', 'You already took my jersey!'])
-annie = Mentor('Annie', ["I love nachos, do you happen to want my half eaten nachos?", "My half eaten nachos are gone! I'm starving :(!"])
-angela = Mentor('Angela',["I have no friends. Do you happen to need one?", "I"])
-jesse = Mentor('Jesse', ['Looking for your friend? Are you sure you are at the right place?',
-							'Looking for a friend? You did that already.'])
+stanley = Mentor('Stanley', 'Tickets', ["Here is your ticket.... Wait where is my money?", "Nice doing business with you!"])
+gary = Mentor('Gary', "Warriors Jersey", ["Want this used jersey? I have a Warriors Jersey" , "You already took my jersey!"])
+annie = Mentor('Annie', "Nachos", ["I love nachos, do you happen to want my half eaten nachos?", "My half eaten nachos are gone! I'm starving :(!"])
+angela = Mentor('Angela', "Friend", ["I have no friends. Do you happen to need one?", "I am already your friend."])
+jesse = Mentor('Jesse', ["Looking for your friend? Are you sure you are at the right place?",
+							"Looking for a friend? You did that already."])
 dennis = Mentor('Dennis', ["I didn't expect anyone to show up.... There's nothing up here....", ""])
-sandy = Mentor('Sandy', [''])
+sandy = Mentor('Sandy', [""])
 
 
 # Things:
 tickets = Thing('Tickets', 'Tickets to the Warriors Game. Need this to enter Oracle Areana.')
 nachos = Thing('Nachos', 'Yummy! Best snack during a game.')
-jersey = Thing("Warrior's Jersey", '#30 Curry.')
+jersey = Thing("Warriors Jersey", '#30 Curry.')
 money = Thing('Money', "I'm so rich!")
+friend = Thing('Friend', "I'm so popular!")
 
 # Friend:
 """ Change Oski to your friends name! """

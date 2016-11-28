@@ -10,38 +10,63 @@ class Player(object):
 	def go_to(self, location):
 		""" Go to a location
 		"""
+        return None
+        
     def ask(self, person):
         """ Ask the person questions """
+        return None
 
 	def talk_to(self, person):
 		""" Talk to person if person is at player's current place.
 		"""
+        return None
 
 	def check_backpack(self):
 		""" Prints out all the items in your backpack.
 		"""
+        return None
 
 	def take(self, thing):
 		""" Take a thing if at player's current place.
 		"""
+        return None
 
     def pick_up(self, friend):
         """ Pick up a friend at player's current place.
         """
+        return None
 
 	def unlock(self, place):
 		""" Unlocks player's current place, if place is locked and player has ticket.
 		"""
+        return None
 
 #requirement, message, bad 
+#player can only ask one question, mentor responds with one answer depending on item in backpack
 class Mentor(object):
-    def __init__(self, name, messages):
+    def __init__(self, item, name, messages):
         self.name = name
+        self.item = item
+        self.has_item = True
         self.missing_message = message[0]
-        self.response_message = message[1]
+        self.has_message = message[1]
+    
+    #response for line of questioning
+    def response(self, player):
+        #check item in backpack
+        if item not in player.check_backpack():
+            return self.missing_message
+        else:
+            return self.has_message
+    
+    #if player decides they want say take
+    def give(self, player):
+        if self.has_item and self.item:
+            print(self.name, 'gives the ', item)
+            player.backpack.append(item)
+            self.has_item = False
+        print("I do not have anything to give you.")
 
-    def talk(self):
-        return self.response_message
 
 class Thing(object):
     def __init__(self, name, description):
