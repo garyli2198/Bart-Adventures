@@ -10,6 +10,8 @@ class Player(object):
 	def go_to(self, location):
 		""" Go to a location
 		"""
+    def ask(self, person):
+        """ Ask the person questions """
 
 	def talk_to(self, person):
 		""" Talk to person if person is at player's current place.
@@ -31,13 +33,15 @@ class Player(object):
 		""" Unlocks player's current place, if place is locked and player has ticket.
 		"""
 
+#requirement, message, bad 
 class Mentor(object):
-    def __init__(self, name, message):
+    def __init__(self, name, messages):
         self.name = name
-        self.message = message
+        self.missing_message = message[0]
+        self.response_message = message[1]
 
     def talk(self):
-        return self.message
+        return self.response_message
 
 class Thing(object):
     def __init__(self, name, description):

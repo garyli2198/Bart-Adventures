@@ -2,15 +2,16 @@
 from game import *
 
 # Mentors:
-stanley = Character('Stanley', ['Here is your ticket.... Wait where is my money?', 
-					'Nice doing business with you!'])
-gary = Character('Gary', [''])
-annie = Character('Annie', [''])
-angela = Character('Angela',[''])
-jesse = Character('Jesse', ['Looking for your friend? Are you sure you are at the right place?',
+#how to check whether or not they have the item
+#first is item not in backpack, second is item in backpack
+stanley = Mentor('Stanley', ["Here is your ticket.... Wait where is my money?", "Nice doing business with you!"])
+gary = Mentor('Gary', ['Want this used jersey?', 'You already took my jersey!'])
+annie = Mentor('Annie', ["I love nachos, do you happen to want my half eaten nachos?", "My half eaten nachos are gone! I'm starving :(!"])
+angela = Mentor('Angela',["I have no friends. Do you happen to need one?", "I"])
+jesse = Mentor('Jesse', ['Looking for your friend? Are you sure you are at the right place?',
 							'Looking for a friend? You did that already.'])
-dennis = Character('Dennis', ["I didn't expect anyone to show up.... There's nothing up here...."])
-sandy = Character('Sandy', [''])
+dennis = Mentor('Dennis', ["I didn't expect anyone to show up.... There's nothing up here....", ""])
+sandy = Mentor('Sandy', [''])
 
 
 # Things:
