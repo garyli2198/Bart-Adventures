@@ -27,17 +27,6 @@ class Player(object):
         else:
             print(person, "responds: ", self.place.characters[person].response(self))
 
-	def talk_to(self, person):
-		""" Talk to person if person is at player's current place.
-		"""
-        if type(person) != str:
-            print('Person has to be a string.')
-        elif person not in self.place.characters:
-            print(person, 'is not here.')
-        else:
-            print(person, 'says: ', self.place.characters[person].talk())
-
-
 	def check_backpack(self):
 		""" Prints out all the items in your backpack.
 		"""
@@ -97,8 +86,8 @@ class Mentor(object):
         self.name = name
         self.item = item
         self.has_item = True
-        self.missing_message = message[0]
-        self.has_message = message[1]
+        self.missing_message = messages[0]
+        self.has_message = messages[1]
     
     #response for line of questioning
     def response(self, player):
@@ -142,14 +131,13 @@ class Key(Thing):
             print(place.name, 'is already unlocked!')
 
 class Place(object):
-    def __init__(self, name, description, characters, things, friend):
+    def __init__(self, name, description, characters, things):
         self.name = name
         self.description = description
         self.characters = {character.name: character for character in characters}
         self.things = {thing.name: thing for thing in things}
         self.locked = False
         self.exits = {}
-        self.friend = 
 
     def look(self):
         print('You are currently at ' + self.name + '. You take a look around and see:')
