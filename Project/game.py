@@ -114,20 +114,12 @@ class Thing(object):
     def use(self, place):
         print("You can't use a {0} here".format(self.name))
 
-class Key(Thing):
-    def use(self, place):
-        if place.locked:
-            place.locked = False
-            print(place.name, 'is now unlocked!')
-        else:
-            print(place.name, 'is already unlocked!')
 
 class Place(object):
-    def __init__(self, name, description, characters, things):
+    def __init__(self, name, description, characters):
         self.name = name
         self.description = description
         self.characters = {character.name: character for character in characters}
-        self.things = {thing.name: thing for thing in things}
         self.locked = False
         self.exits = {}
 
@@ -138,13 +130,7 @@ class Place(object):
             print('    no one in particular')
         else:
             for character in self.characters:
-                print('   ', character)
-        print('Things:')
-        if not self.things:
-            print('    nothing in particular')
-        else:
-            for thing in self.things.values():
-                print('   ', thing.name, '-', thing.description)
+                print('   ', character)    
         self.check_exits()
 
     def get_neighbor(self, exit):
@@ -158,9 +144,6 @@ class Place(object):
             print("Can't go to {} from {}.".format(exit, self.name))
             print("Try looking around to see where to go.")
             return self
-
-    def take(self, thing):
-        return self.things.pop(thing)
 
     def check_exits(self):
         print('You can exit to:')

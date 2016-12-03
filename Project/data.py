@@ -25,32 +25,32 @@ friend = Thing('Friend', "I'm so popular!")
 
 # Places:
 downtown_berkeley = Place('Downtown Berkeley', 'Downtown Berkeley - Ah, the scent of struggling college students',
-                          [], [])
+                          [])
 oracle_arena = Place('Oracle Arena', 'Oracle Arena - Home of the Warriors!',
-					 [], [])
+					 [])
 sliver_pizzeria = Place('Sliver Pizzeria', 'Sliver Pizzeria - Best vegetarian pizza around.',
-					 	[stanley], [])
+					 	[stanley])
 chase_bank = Place('Chase Bank', 'Chase Bank - There is an ATM here',
-                    [], [money])
-sfo = Place('SFO', "SFO - Oh man, I'm afraid of heights", [angela], [])
+                    [])
+sfo = Place('SFO', "SFO - Oh man, I'm afraid of heights", [angela])
 oakland_airport = Place('Oakland Airport', 'Oakland Airport - Hmm where is my friend?',
-						[jesse], [])
+						[jesse])
 coliseum_bart = Place('Coliseum Bart Station', 'Coliseum Bart Station - Stadiums everywhere',
-				[], [])
+				[])
 fruitvale_bart = Place('Fruitvale Bart Station', 'Fruitvale Bart Station - So does this place sell fruits?',
-				[], [])
+				[])
 convenience_store = Place('Convenience Store', 'Convenience Store - I wonder if I can buy snacks here',
-				[annie], [])
-parking_lot = Place('Parking lot', 'Parking lot - There seems to be no cars', [], [])
+				[annie])
+parking_lot = Place('Parking lot', 'Parking lot - There seems to be no cars', [])
 macArthur_bart = Place('MacArthur Bart Station', 'MacArthur Bart Station - Transfer Station',
-				[], [])
+				[])
 northBerkeley_bart = Place('North Berkeley Bart Station', 'North Berkeley Bart Station - What there is a North Berkeley?',
-				[dennis], [])
+				[dennis])
 powell_bart = Place('Powell Bart Station', 'Powell Bart Station - Underneath the MALL!',
-				[], [])
-macys = Place("Macy's", "Macy's - Hella expensive", [], [])
+				[])
+macys = Place("Macy's", "Macy's - Hella expensive", [])
 warriors_store = Place("Warriors Team Store", "Warriors Team Store - Warriors stuff, Warriors stuff everywhere",
-						[], [jersey])
+						[])
 
 # Exits:
 macArthur_bart.add_exits([northBerkeley_bart, downtown_berkeley, fruitvale_bart, coliseum_bart, powell_bart, sfo])
