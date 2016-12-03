@@ -40,7 +40,7 @@ coliseum_bart = Place('Coliseum Bart Station', 'Coliseum Bart Station - Stadiums
 				[], [])
 fruitvale_bart = Place('Fruitvale Bart Station', 'Fruitvale Bart Station - So does this place sell fruits?',
 				[], [])
-convience_store = Place('Convience Store', 'Convience Store - I wonder if I can buy snacks here',
+convenience_store = Place('Convenience Store', 'Convenience Store - I wonder if I can buy snacks here',
 				[annie], [])
 parking_lot = Place('Parking lot', 'Parking lot - There seems to be no cars', [], [])
 macArthur_bart = Place('MacArthur Bart Station', 'MacArthur Bart Station - Transfer Station',
@@ -66,9 +66,9 @@ sfo.add_exits([powell_bart, macArthur_bart, downtown_berkeley, northBerkeley_bar
 coliseum_bart.add_exits([oracle_arena, oakland_airport, fruitvale_bart, macArthur_bart, downtown_berkeley, northBerkeley_bart])
 oakland_airport.add_exits([coliseum_bart])
 oracle_arena.add_exits([coliseum_bart])
-fruitvale_bart.add_exits([convience_store, parking_lot, coliseum_bart, macArthur_bart, downtown_berkeley, northBerkeley_bart])
-convience_store.add_exits([parking_lot, fruitvale_bart])
-parking_lot.add_exits([fruitvale_bart, convience_store])
+fruitvale_bart.add_exits([convenience_store, parking_lot, coliseum_bart, macArthur_bart, downtown_berkeley, northBerkeley_bart])
+convenience_store.add_exits([parking_lot, fruitvale_bart])
+parking_lot.add_exits([fruitvale_bart, convenience_store])
 
 # Locked Places
 oracle_arena.locked = True

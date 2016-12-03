@@ -114,14 +114,6 @@ class Thing(object):
     def use(self, place):
         print("You can't use a {0} here".format(self.name))
 
-class Friend(object):
-    def __init__(self, name, message):
-        self.name = name #We can make this an input
-        self.message = message
-
-    def talk(self):
-        return self.message
-
 class Key(Thing):
     def use(self, place):
         if place.locked:
