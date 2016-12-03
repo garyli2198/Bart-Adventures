@@ -4,13 +4,12 @@ from game import *
 # Mentors:
 #how to check whether or not they have the item
 #first is item not in backpack, second is item in backpack
-stanley = Mentor('Stanley', 'Tickets', ["Here is your ticket.... Wait where is my money?", "Nice doing business with you!"])
-gary = Mentor('Gary', "Warriors Jersey", ["Want this used jersey? I have a Warriors Jersey" , "You already took my jersey!"])
-annie = Mentor('Annie', "Nachos", ["I love nachos, do you happen to want my half eaten nachos?", "My half eaten nachos are gone! I'm starving :(!"])
-angela = Mentor('Angela', "Friend", ["I have no friends. Do you happen to need one?", "I am already your friend."])
-jesse = Mentor('Jesse', ["Looking for your friend? Are you sure you are at the right place?",
-							"Looking for a friend? You did that already."])
-dennis = Mentor('Dennis', ["I didn't expect anyone to show up.... There's nothing up here....", ""])
+stanley = Mentor('Stanley', 'Tickets', ["Here are your TICKETS.... Wait where is my money?", "Nice doing business with you!"])
+gary = Mentor('Gary', "Warriors Jersey", ["Want this used WARRIORS JERSEY?" , "You already took my jersey!"])
+annie = Mentor('Annie', "Nachos", ["I love nachos, do you happen to want my NACHOS?", "My half eaten nachos are gone! I'm starving :(!"])
+angela = Mentor('Angela', "Friend", ["I found your FRIEND Dennis. Do you want to take him?", "I already gave you your friend."])
+jesse = Mentor('Jesse', ["Do you happen need to happen to need $200 MONEY from the bank?",
+							"You already withdrew all your money."])
 sandy = Mentor('Sandy', [""])
 
 
