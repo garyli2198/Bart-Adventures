@@ -18,14 +18,14 @@ class Player(object):
             self.place = destination_place
         print('You are at', self.place.name)
         
-    def ask(self, person):
+    def ask(self, mentor):
         """ Ask the person questions """
         if type(person) != str:
             print("Mentor has to be a string")
         elif person not in self.place.characters:
-            print(person, "is not here.")
+            print(mentor, "is not here.")
         else:
-            print(person, "responds: ", self.place.characters[person].response(self))
+            print(mentor, "responds: ", self.place.characters[person].response(self))
 
 	def check_backpack(self):
 		""" Prints out all the items in your backpack.
@@ -39,29 +39,15 @@ class Player(object):
         return [item.name for item in self.backpack]
 
 
-	def take(self, thing):
+	def take(self, mentor):
 		""" Take a thing if at player's current place.
 		"""
-        if type(thing) != str:
-            print('Thing should be a string.')
-        elif thing not in self.place.things:
-            print(thing, 'is not here.')
+        if type(mentor) != str:
+            print('Mentor should be a string.')
+        elif not self.place.characters[mentor]:
+            print(mentor, 'is not here.')
         else:
-            taken = self.place.take(thing)
-            print(self.name, 'takes the', taken.name)
-            self.backpack.append(taken)
-
-    def pick_up(self, friend):
-        """ Pick up a friend at player's current place.
-        """
-        if type(friend) != str:
-            print("Friend should be a string.")
-        elif friend is not self.place.friend.name:
-            print(friend, " is not here.")
-        else:
-            print(self.name, "picks up", self.place.friend.name)
-            self.backpack.append(self.place.friend)
-            self.place.friend = None
+            self.place.characters[mentor].give(self)
 
 	def unlock(self, place):
 		""" Unlocks player's current place, if place is locked and player has ticket.
